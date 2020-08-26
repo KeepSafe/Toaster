@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03A75E2A1BCF2066002E46C4"
-               BuildableName = "Toaster.framework"
-               BlueprintName = "Toaster"
+               BlueprintIdentifier = "03A75E4E1BCF20D4002E46C4"
+               BuildableName = "ToasterDemo.app"
+               BlueprintName = "ToasterDemo"
                ReferencedContainer = "container:Toaster.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,23 +28,13 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C06FC9D01F95A8CC00782082"
-               BuildableName = "ToasterTests.xctest"
-               BlueprintName = "ToasterTests"
-               ReferencedContainer = "container:Toaster.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "03A75E2A1BCF2066002E46C4"
-            BuildableName = "Toaster.framework"
-            BlueprintName = "Toaster"
+            BlueprintIdentifier = "03A75E4E1BCF20D4002E46C4"
+            BuildableName = "ToasterDemo.app"
+            BlueprintName = "ToasterDemo"
             ReferencedContainer = "container:Toaster.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -59,17 +49,19 @@
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      stopOnEveryMainThreadCheckerIssue = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "03A75E2A1BCF2066002E46C4"
-            BuildableName = "Toaster.framework"
-            BlueprintName = "Toaster"
+            BlueprintIdentifier = "03A75E4E1BCF20D4002E46C4"
+            BuildableName = "ToasterDemo.app"
+            BlueprintName = "ToasterDemo"
             ReferencedContainer = "container:Toaster.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -79,15 +71,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "03A75E2A1BCF2066002E46C4"
-            BuildableName = "Toaster.framework"
-            BlueprintName = "Toaster"
+            BlueprintIdentifier = "03A75E4E1BCF20D4002E46C4"
+            BuildableName = "ToasterDemo.app"
+            BlueprintName = "ToasterDemo"
             ReferencedContainer = "container:Toaster.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

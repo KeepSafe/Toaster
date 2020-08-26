@@ -8,12 +8,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(
     _ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
-    self.window = UIWindow(frame: UIScreen.main.bounds)
-    self.window!.backgroundColor = UIColor.white
-    self.window!.rootViewController = RootViewController()
-    self.window!.makeKeyAndVisible()
+    let window = UIWindow(frame: UIScreen.main.bounds)
+    self.window = window
+    window.backgroundColor = UIColor.white
+    window.rootViewController = RootViewController()
+    window.makeKeyAndVisible()
     return true
   }
 

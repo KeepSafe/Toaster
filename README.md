@@ -2,13 +2,17 @@ Toaster
 =======
 
 [![Build Status](https://travis-ci.org/devxoul/Toaster.svg?branch=master)](https://travis-ci.org/devxoul/Toaster)
-![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
-[![CocoaPods](http://img.shields.io/cocoapods/v/Toaster.svg?style=flat)](http://cocoapods.org/?q=name%3AToaster%20author%3Adevxoul)
+![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)
+[![CocoaPods](https://img.shields.io/cocoapods/v/Toaster.svg?style=flat)](https://cocoapods.org/?q=name%3AToaster%20author%3Adevxoul)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Android-like toast with very simple interface. (formerly JLToast)
 
-Toaster is written in Swift 3.0. If you're looking for Swift 2 compatible version, see the [JLToast 1.4.2](https://github.com/devxoul/JLToast/tree/1.4.2).
+
+Screenshots
+-----------
+
+![Toaster Screenshot](https://raw.github.com/devxoul/Toaster/master/Screenshots/Toaster.png)
 
 
 Features
@@ -16,6 +20,8 @@ Features
 
 - **Queueing**: Centralized toast center manages the toast queue.
 - **Customizable**: See the [Appearance](#appearance) section.
+- **String** or **AttributedString**: Both supported.
+- **UIAccessibility**: VoiceOver support.
 
 
 At a Glance
@@ -63,7 +69,7 @@ Toast(text: "Hello, world!", delay: Delay.short, duration: Delay.long)
     toast.show()
     toast.cancel() // remove toast immediately
     ```
-    
+
 - **Removing current toast**:
 
     ```swift
@@ -71,7 +77,7 @@ Toast(text: "Hello, world!", delay: Delay.short, duration: Delay.long)
         currentToast.cancel()
     }
     ```
-    
+
 - **Removing all toasts**:
 
     ```swift
@@ -86,7 +92,6 @@ Since Toaster 2.0.0, you can use `UIAppearance` to set default appearance. This 
 ToastView.appearance().backgroundColor = .red
 ```
 
-
 Supported appearance properties are:
 
 | Property | Type | Description |
@@ -97,13 +102,29 @@ Supported appearance properties are:
 | `textColor` | `UIColor` | Text color |
 | `font` | `UIFont` | Font |
 | `bottomOffsetPortrait` | `CGFloat` | Vertical offfset from bottom in portrait mode |
-|` bottomOffsetLandscape` | `CGFloat` | Vertical offfset from bottom in landscape mode |
+| `bottomOffsetLandscape` | `CGFloat` | Vertical offfset from bottom in landscape mode |
+| `shadowPath` | `CGPath` | The shape of the layer’s shadow |
+| `shadowColor` | `UIColor` | The color of the layer’s shadow |
+| `shadowOpacity` | `Float` | The opacity of the layer’s shadow |
+| `shadowOffset` | `CGSize` | The offset (in points) of the layer’s shadow |
+| `shadowRadius` | `CGFloat` | The blur radius (in points) used to render the layer’s shadow |
+| `maxWidthRatio` | `CGFloat` | The width ratio of toast view in window |
+| `useSafeAreaForBottomOffset` | `Bool` | A Boolean value that determines `safeAreaInsets.bottom` is added to `bottomOffset` |
 
+### Attributed string
 
-Screenshots
------------
+Since Toaster 2.3.0, you can also set an attributed string:
 
-![Toaster Screenshot](https://raw.github.com/devxoul/Toaster/master/Screenshots/Toaster.png)
+```swift
+Toast(attributedText: NSAttributedString(string: "AttributedString Toast", attributes: [NSAttributedString.Key.backgroundColor: UIColor.yellow]))
+```
+
+### Accessibility
+
+By default, VoiceOver with UIAccessibility is enabled since Toaster 2.3.0. To disable it:
+```swift
+ToastCenter.default.isSupportAccessibility = false
+```
 
 
 License
